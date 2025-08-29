@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "name": "Message",
+  "namespace": "com.example.kafka.avro",
+  "fields": [
+    {"name": "name", "type": "string"},
+    {"name": "description", "type": "string"},
+    {"name": "isNPC", "type": "boolean"}
+  ]
+}

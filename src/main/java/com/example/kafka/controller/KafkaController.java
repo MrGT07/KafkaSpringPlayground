@@ -1,6 +1,7 @@
 package com.example.kafka.controller;
 
 
+import com.example.kafka.avro.Message;
 import com.example.kafka.response.MessageResponse;
 import com.example.kafka.service.KafkaProducerService;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +19,7 @@ public class KafkaController {
     private final KafkaProducerService kafkaProducerService;
 
     @PostMapping("/send")
-    public String sendMessage(@RequestBody MessageResponse message) {
+    public String sendMessage(@RequestBody Message message) {
         kafkaProducerService.sendMessage(message);
         return "Message sent to Kafka topic";
     }
